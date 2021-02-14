@@ -11,7 +11,7 @@ terraform {
 provider "aws" {
   access_key = var.acc
   secret_key = var.sec
-  region = "us-east-2"
+  region = "us-east-1"
 }
 
 # Create a VPC
@@ -25,7 +25,7 @@ output "AWS_Link" {
 }
 resource "aws_instance" "vib_aws" {
   key_name      = aws_key_pair.vib_aws.key_name
-  ami           = "ami-0a0ad6b70e61be944"
+  ami           = "ami-047a51fa27710816e"
   instance_type = "t2.micro"
 
   tags = {
